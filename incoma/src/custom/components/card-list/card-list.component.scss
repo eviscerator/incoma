@@ -1,0 +1,29 @@
+.wrapper-card-list {
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  gap: 30px;
+  margin: 0 0 20px;
+}
+
+.wrapper-filter  {
+   &__input {
+    height: 30px;
+     font-size: 14px;
+     margin-bottom: 20px;
+     width: 300px;
+     padding: 0 10px;
+   }
+}
+
+.wrapper-more-card {
+  margin: 0 0 20px;
+
+  .more-card {
+    cursor: pointer;
+  }
+}
+
+.type-card {
+   margin: 20px 0;
+  cursor: pointer;
+}

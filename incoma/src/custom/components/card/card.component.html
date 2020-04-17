@@ -1,0 +1,16 @@
+<div class="wrapper-card">
+  <button (click)="changeFavorites()" class="favorites_btn">{{card.favorites ? 'delete' : 'add' }} favorites</button>
+  <h1 class="wrapper-card__title">{{ card.title }}</h1>
+  <div class="wrapper-card__img">
+    <img [src]="card.imageLinks">
+  </div>
+  <div class="wrapper-card__line">
+    <b>authors:</b> {{ card.authors }}
+  </div>
+  <div class="wrapper-card__line">
+    <b>language:</b>{{ card.language }}
+  </div>
+  <div class="wrapper-card__line">
+    <b>page count:</b>{{ card.pageCount}}
+  </div>
+</div>

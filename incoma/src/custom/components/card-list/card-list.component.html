@@ -1,0 +1,24 @@
+<button class="type-card" (click)="showFavoritesCards()">
+  {{showCards ? 'hidden' : 'show'}} favorites cards
+</button>
+
+<div class="wrapper-more-card">
+  <button class="more-card" (click)="moreUploadCards()">more card</button>
+</div>
+
+
+<div *ngIf="!showCards">
+  <div class="wrapper-filter">
+    <input class="wrapper-filter__input" type="text" (keyup)="filter($event)">
+  </div>
+
+  <div class="wrapper-card-list" >
+    <app-card *ngFor="let itemCard of cardsList"  [card]="itemCard" (editFavorites)="getFavoritesList()"></app-card>
+  </div>
+</div>
+
+
+<div class="wrapper-card-list" *ngIf="showCards">
+  <app-card *ngFor="let itemCard of favoritesCardsList"  [card]="itemCard" (editFavorites)="getFavoritesList()"></app-card>
+</div>
+
